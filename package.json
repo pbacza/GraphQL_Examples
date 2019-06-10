@@ -1,0 +1,22 @@
+{
+  "name": "graphql_examples",
+  "version": "1.0.0",
+  "description": "Examples showing capabilities of GraphQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pbacza/GraphQL_Examples.git"
+  },
+  "keywords": [
+    "graphql"
+  ],
+  "author": "Pawel Bacza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pbacza/GraphQL_Examples/issues"
+  },
+  "homepage": "https://github.com/pbacza/GraphQL_Examples#readme"
+}
