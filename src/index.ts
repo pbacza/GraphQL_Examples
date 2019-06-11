@@ -3,7 +3,7 @@ import { ApolloServer, gql } from "apollo-server";
 // The GraphQL schema
 const typeDefs = gql`
   type Query {
-    "A simple type for getting started!"
+    "A simple hello example"
     hello: String
   }
 `;
@@ -11,7 +11,7 @@ const typeDefs = gql`
 // A map of functions which return data for the schema.
 const resolvers = {
   Query: {
-    hello: () => "Yo"
+    hello: () => "Skyrt"
   }
 };
 
