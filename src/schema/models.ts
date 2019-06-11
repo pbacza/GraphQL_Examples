@@ -5,6 +5,14 @@ export interface User {
   email: string;
 }
 
-export interface userInput {
+export interface UserInput {
   id: string;
+}
+
+export interface CreateUserInput {
+  input: {
+    name: string;
+    surname: string;
+    email: string;
+  };
 }

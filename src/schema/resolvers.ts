@@ -1,4 +1,4 @@
-import { User, userInput as UserInput } from "./models";
+import { User, UserInput, CreateUserInput } from "./models";
 import { users } from "../fakeData";
 
 export const resolvers = {
@@ -9,6 +9,22 @@ export const resolvers = {
     },
     allUsers: () => {
       return users;
+    }
+  },
+  Mutation: {
+    createUser: (root: any, args: CreateUserInput) => {
+      const { name, surname, email } = args.input;
+
+      const newUser = {
+        id: "5",
+        name: name,
+        surname: surname,
+        email: email
+      } as User;
+      
+      users.push(newUser);
+
+      return newUser;
     }
   },
   User: {
