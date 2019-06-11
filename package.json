@@ -4,7 +4,11 @@
   "description": "Examples showing capabilities of GraphQL",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check-types": "tsc",
+    "build": "babel src --out-dir dist --extensions '.ts,.tsx'",
+    "start": "nodemon",
+    "debug": "node --inspect -r ts-node/register src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -18,5 +22,20 @@
   "bugs": {
     "url": "https://github.com/pbacza/GraphQL_Examples/issues"
   },
-  "homepage": "https://github.com/pbacza/GraphQL_Examples#readme"
+  "homepage": "https://github.com/pbacza/GraphQL_Examples#readme",
+  "dependencies": {
+    "apollo-server": "^2.6.2",
+    "graphql": "^14.3.1",
+    "ts-node": "^8.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-typescript": "^7.3.3",
+    "nodemon": "^1.19.1",
+    "typescript": "^3.5.1"
+  }
 }
