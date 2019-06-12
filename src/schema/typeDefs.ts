@@ -2,9 +2,11 @@ import { gql } from "apollo-server";
 
 export const typeDefs = gql`
   type Query {
-    "A simple type for getting started!"
+    "A simple hello example"
     hello: String
+    "Get selected user on base of id"
     user(id: ID): User
+    "Get all users"
     allUsers: [User!]
   }
 
