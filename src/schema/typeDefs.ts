@@ -2,7 +2,6 @@ import { gql } from "apollo-server";
 
 export const typeDefs = gql`
   type Query {
-    "A simple type for getting started!"
     hello: String
     user(id: ID): User
     allUsers: [User!]
@@ -10,6 +9,16 @@ export const typeDefs = gql`
 
   type Mutation {
     createUser(input: createUserInput): User
+    updateUserEmail(input: UpdateUserEmailInput): User
+  }
+
+  type Subscription {
+    userEmailUpdated: userEmailUpdatedOutput
+  }
+
+  type userEmailUpdatedOutput {
+    id: ID
+    email: String
   }
 
   type User {
@@ -24,5 +33,10 @@ export const typeDefs = gql`
     name: String!
     surname: String!
     email: String!
+  }
+
+  input UpdateUserEmailInput {
+    id: ID!
+    email: String
   }
 `;
