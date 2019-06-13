@@ -5,7 +5,8 @@ export const typeDefs = gql`
     "A simple hello example"
     hello: String
     """
-    Get only user available in app
+    Get only user
+    available in app
     """
     user: User
   }
